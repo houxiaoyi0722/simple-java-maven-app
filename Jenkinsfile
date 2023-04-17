@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.8.7-openjdk-18-slim'
-            args '-v /root/.m2:/root/.m2'
+            args '-v /root/.m2:/root/.m2 -v /usr/share/maven/conf:/usr/share/maven/conf'
         }
     }
     stages {
